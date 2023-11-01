@@ -37,12 +37,12 @@
             );
 
             // GeoJSONレイヤーを作成
-            fetch('./P11-22_25.geojson') // 群馬県の学校データのGeoJSONを非同期読み込み
+            fetch('./P11-22_25.geojson') // 滋賀県のバス停留所データのGeoJSONを非同期読み込み
                 .then((res) => res.json())
                 .then((json) => {
                     // GeoJSONレイヤーを作成
                     L.geoJSON(json)
-                        .bindPopup((layer) => layer.feature.properties.P11_001) // ポップアップで学校名を表示
+                        .bindPopup((layer) => layer.feature.properties.P11_001) // ポップアップでバス停名を表示
                         .addTo(map);
                 });
         </script>
