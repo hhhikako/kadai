@@ -42,7 +42,7 @@
                 .then((json) => {
                     // GeoJSONレイヤーを作成
                     L.geoJSON(json)
-                        .bindPopup((layer) => "<p>バス停留所名:"+layer.feature.properties.P11_001+'</p>'+"<p>バス停留所所在地(市区町村):"+layer.feature.properties.P11_002+'</p>'+"バス会社名:"+layer.feature.properties.P11_003_01) // ポップアップでバス停名を表示
+                        .bindPopup((layer) => "<p>バス停留所名:"+layer.feature.properties.P11_001+'</p>'+"<p>バス停留所所在地(市区町村):"+layer.feature.properties.P11_002+'</p>'+"バス路線名:"+layer.feature.properties.P11_003_01) // ポップアップでバス停名を表示
                         .addTo(map);
                 });
         </script>
